@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(248, 247, 247);
+    color: rgb(68, 57, 57);
+}
+
+.pagina {
+    max-width: 790px;
+    margin: 0 auto;
+    padding: 32px 16px 64px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.subtitulo {
+    color: rgb(98, 13, 255);
+    margin-top: 6px;
+}
+
+.totais {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.cartao {
+    background-color: rgb(0, 0, 0);
+    border: 1px solid yellow;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.cartao-destaque {
+    background-color: #000000;
+    border-color: yellow;
+}
+
+.rotulo {
+    margin: 0;
+    font-size: 14px;
+    color: grey;
+}
+
+.numero {
+    margin: 8px 0 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.formulario {
+    background-color: rgb(230, 226, 226);
+    border: 1px solid rgb(0, 0, 0);
+    border: 16px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 12px;
+    align-items: end;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input {
+    padding: 9px 10px;
+    border: 1px solid rgb(8, 7, 7);
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: blue;
+}
+
+.botao {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: blue;
+}
+
+.lista {
+    list-style: none;
+    padding: 0;
+    margin: 1px 0 0 ;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+}
+
+.marcar {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 2px solid grey;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.item.pago .marcar {
+    background-color: aquamarine;
+    border-color: aquamarine;
+    color: brown;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-descricao {
+    margin: 0;
+    font-weight: bold;
+}
+
+.item-data {
+    margin: 2px 0 0 ;
+    font-size: 12px;
+    color: grey;
+}
+
+.item-valor {
+    font-weight: bold;
+}
+
+.item-pago .item-descricao, .item.pago .item-valor {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.excluir {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.aviso {
+    color: grey;
+    text-align: center;
+    padding: 24px;
+    border: 1px dashed white;
+    border-radius: 12px;
+}
+
+@media (max-width: 700px) {
+    .totais{
+        grid-template-columns: 1fr;
+    }
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+}
